@@ -64,7 +64,7 @@ const Hero = () => {
         alt="Abenezer Seifu's profile picture"
         width={600}
         height={600}
-        className="absolute z-10 -right-16 lg:right-0 bottom-0 hidden md:block"
+        className="absolute -right-16 lg:right-0 bottom-0 hidden md:block"
       />
     </section>
   );

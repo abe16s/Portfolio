@@ -1,15 +1,27 @@
-import Image from "next/image";
 import NavBar from "./components/Navbar";
 import { AuroraBackground } from "./components/aurora-background";
 import Hero from "./components/hero";
+import About from "./components/About";
+import { Vortex } from "./components/vortex";
 
 export default function Home() {
   return (
     <>
       <NavBar/>
-      <AuroraBackground> 
+      <AuroraBackground className="fade-out-bottom"> 
         <Hero/>
       </AuroraBackground>
+      <div className="mx-auto rounded-md h-[70vh] overflow-hidden fade-out-top">
+        <Vortex
+          backgroundColor="black"
+          particleCount={500}
+          rangeY={800}
+          baseHue={120}
+          className="flex items-center flex-col justify-center px-2 md:px-10 py-4"
+          >
+          <About/>
+        </Vortex>
+      </div>
     </>
   );
 }

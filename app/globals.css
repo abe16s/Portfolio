@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.fade-out-bottom{
+    mask-image: linear-gradient(to bottom, black 75%, transparent);
+}
+
+.fade-out-top {
+    mask-image: linear-gradient(to top, black 50%, transparent);
+}
