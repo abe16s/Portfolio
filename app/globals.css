@@ -7,5 +7,9 @@
 }
 
 .fade-out-top {
-    mask-image: linear-gradient(to top, black 50%, transparent);
+    mask-image: linear-gradient(to top, black 85%, transparent);
+}
+
+.fade-out-both {
+    mask-image: linear-gradient(to bottom, transparent, black 40%, transparent);
 }

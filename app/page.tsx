@@ -3,6 +3,7 @@ import { AuroraBackground } from "./components/aurora-background";
 import Hero from "./components/hero";
 import About from "./components/About";
 import { Vortex } from "./components/vortex";
+import Education from "./components/Education";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       <AuroraBackground className="fade-out-bottom"> 
         <Hero/>
       </AuroraBackground>
-      <div className="mx-auto rounded-md h-[70vh] overflow-hidden fade-out-top">
+      <div className="mx-auto rounded-md h-[100vh] overflow-hidden fade-out-both">
         <Vortex
           backgroundColor="black"
           particleCount={500}
@@ -22,6 +23,8 @@ export default function Home() {
           <About/>
         </Vortex>
       </div>
+      <Education/>
+      <div className="h-screen"></div>
     </>
   );
 }
