@@ -32,6 +32,8 @@ const config: Config = {
       },
       animation: {
         aurora: "aurora 60s linear infinite",
+        "loop-scroll-left": "loop-scroll-left 20s linear infinite",
+        "loop-scroll-right": "loop-scroll-right 20s linear infinite",
       },
       keyframes: {
         aurora: {
@@ -41,6 +43,14 @@ const config: Config = {
           to: {
             backgroundPosition: "350% 50%, 350% 50%",
           },
+        },
+        "loop-scroll-left": {
+          from: { transform: "translateX(0%)" },
+          to: { transform: "translateX(-100%)" },
+        },
+        "loop-scroll-right": {
+          from: { transform: "translateX(-100%)" },
+          to: { transform: "translateX(0%)" },
         },
       },
     },

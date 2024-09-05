@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer utilities {
+    .paused {
+        animation-play-state: paused;
+    }
+}
+
 .fade-out-bottom{
     mask-image: linear-gradient(to bottom, black 75%, transparent);
 }
