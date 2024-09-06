@@ -1,13 +1,60 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { LampContainer } from './lamp'
-import { FaEnvelope, FaFacebook, FaGithub, FaHouse, FaInstagram, FaLinkedin, FaPhone, FaTelegram, FaXTwitter } from "react-icons/fa6";
+import { FaCircleCheck, FaEnvelope, FaExclamation, FaFacebook, FaGithub, FaHouse, FaInstagram, FaLinkedin, FaPhone, FaTelegram, FaXTwitter } from "react-icons/fa6";
+import { FieldErrors, useForm } from "react-hook-form";
+
+interface FormData {
+    FullName: string;
+    Email: string;
+    subject: string;
+    message: string;
+}
 
 const Contact = () => {
+    const [submissionError, setSubmissionError] = useState<string | null>(null);
+    const [submissionSuccess, setSubmissionSuccess] = useState<boolean>(false);
+
+    const form = useForm<FormData>({
+        defaultValues: {
+            FullName: "",
+            Email: "",
+            subject: "",
+            message: ""
+        },
+        mode: "onChange"
+    })
+    const { register, handleSubmit, formState, reset } = form
+    const { errors } = formState
+
+
+    const onSubmit = (data: FormData) => {
+        fetch(process.env.NEXT_PUBLIC_EMAIL as string || '', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: data.FullName,
+                email: data.Email,
+                subject: data.subject,
+                message: data.message
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            setSubmissionError(null); 
+            setSubmissionSuccess(true); 
+        })
+        .catch(error => {
+            setSubmissionError(error.message); // Set error message
+            setSubmissionSuccess(false); 
+        });
+    }
+
   return (
     <div id="contact" className="mt-52">
         <LampContainer>
-            <div></div>
             <div className="flex items-stretch justify-around">
                 <div className="flex flex-col items-center justify-center gap-8">
                     <ul className="flex gap-4 text-3xl justify-around">
@@ -24,15 +71,53 @@ const Contact = () => {
                         <li><a className="flex gap-2" href="mailto:abenezerseifu123@gmail.com"><FaEnvelope/> <span>abenezerseifu123@gmail.com</span></a></li>
                     </ul>
                 </div>
-                <form className="p-3 flex flex-col text-black w-11/12 max-w-[500px]">
+                <form className="p-3 flex flex-col text-black w-11/12 max-w-[500px]"
+                    onSubmit={handleSubmit(onSubmit)}
+                    noValidate    
+                >
                     <p className="text-center text-white text-extrabold text-lg">Get in touch</p>
-                    <input className="my-1 mx-auto rounded-md p-1 border-2 border-blue-500 text-white bg-transparent w-4/5" id="name" type="text" placeholder="Full Name" name="FullName"/>
-                    <input className="my-1 mx-auto rounded-md p-1 border-2 border-blue-500 text-white bg-transparent w-4/5" id="email" type="email" placeholder="Email" name="Email"/>
-                    <input className="my-1 mx-auto rounded-md p-1 border-2 border-blue-500 text-white bg-transparent w-4/5" id="subject" type="text" placeholder="Subject" name="subject"/>
-                    <textarea className="my-1 mx-auto rounded-md px-1 border-2 border-blue-500 text-white bg-transparent w-4/5" name="message" id="message" cols={30} rows={5} placeholder="Message"></textarea>
-                    {/* <p className="text-slate-200"><i className="fa-regular fa-circle-check"></i>Submitted successfully! Thank you for your message!</p>
-                    <p className="text-slate-200"><i className="fa-solid fa-exclamation"></i>There was an error submitting your message. Please try again.</p> */}
-                    <button type="submit" className="mt-5 border-2 border-blue-500 text-white rounded-md w-1/3 p-2 mx-auto">Submit</button>
+                    <div>
+                        <input 
+                            className="block my-1 mx-auto rounded-md p-1 border-2 border-blue-500 text-white bg-transparent w-4/5" 
+                            id="name" 
+                            type="text" 
+                            placeholder="Full Name" 
+                            {...register("FullName", { required: 'What shall I call you'})}
+                        />
+                        <p className='text-red-500 text-xs w-4/5 mx-auto'>{errors.FullName?.message}</p>
+                    </div>
+                    <div>
+                        <input 
+                            className="block my-1 mx-auto rounded-md p-1 border-2 border-blue-500 text-white bg-transparent w-4/5" 
+                            id="email" type="email" placeholder="Email"
+                            {...register("Email", { required: "I have to know how to reach you", 
+                                pattern: {
+                                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                                    message: "Invalid email address"
+                                }})}
+                        />
+                        <p className='text-red-500 text-xs w-4/5 mx-auto'>{errors.Email?.message}</p>
+                    </div>
+                    <div>
+                        <input 
+                            className="block my-1 mx-auto rounded-md p-1 border-2 border-blue-500 text-white bg-transparent w-4/5" 
+                            id="subject" type="text" placeholder="Subject" 
+                        />
+                    </div>
+                    <div>
+                        <textarea 
+                            className="block my-1 mx-auto rounded-md px-1 border-2 border-blue-500 text-white bg-transparent w-4/5" 
+                            id="message" cols={30} rows={5} placeholder="Message"
+                            {...register("message", { required: "You have to write at least hello", maxLength: {value: 1000, message: "Too many characters"} })}
+                        />
+                        <p className='text-red-500 text-xs w-4/5 mx-auto'>{errors.message?.message}</p>
+                    </div>
+                    {submissionSuccess && <p className="text-slate-200 flex justify-center gap-2 items-center"><FaCircleCheck /> Submitted successfully! Thank you for your message!</p>}
+                    {submissionError && <p className="text-slate-200 flex justify-center gap-2 items-baseline"><FaExclamation />There was an error submitting your message. Please try again.</p>} 
+                    <button type="submit" className="mt-5 border-2 border-blue-500 text-white rounded-md w-1/3 p-2 mx-auto relative overflow-hidden group">
+                        <span className="relative z-10">Submit</span>
+                        <span className="absolute inset-0 bg-blue-500 -z-10 group-hover:w-full w-0 transition-all duration-1000 ease-in-out"></span>
+                    </button>
                 </form>
             </div> 
         </LampContainer>
