@@ -5,6 +5,7 @@ import About from "./components/About";
 import { Vortex } from "./components/vortex";
 import Education from "./components/Education";
 import Skills from "./components/skills";
+import Projects from "./components/Projects";
 
 export default function Home() {
   return (
@@ -26,7 +27,7 @@ export default function Home() {
       </div>
       <Education/>
       <Skills/>
-      <div className="h-screen"></div>
+      <Projects/>
     </>
   );
 }
