@@ -6,6 +6,7 @@ import { Vortex } from "./components/vortex";
 import Education from "./components/Education";
 import Skills from "./components/skills";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <Education/>
       <Skills/>
       <Projects/>
+      <Contact/>
     </>
   );
 }

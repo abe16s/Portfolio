@@ -27,7 +27,7 @@ const NavBar = () => {
             >
               <a
                 href={item.href}
-                className="block py-1 px-5 text-white relative z-10"
+                className="block py-1 px-5 text-white relative z-10 scroll-smooth"
               >
                 {item.name}
               </a>
