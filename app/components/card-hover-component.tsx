@@ -38,7 +38,7 @@ export const HoverEffect = ({
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-slate-800/[0.8] block  rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-slate-800/[0.8] block rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -80,17 +80,14 @@ export const Card = ({
         <Image
             src={project.image}
             alt={project.title}
-            width={200}
-            height={100}
+            width={500}
+            height={500}
             className="w-full h-72 rounded-3xl object-cover object-top aspect-video"
         />
         {/* Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-4 rounded-3xl">
             <h3 className="text-lg font-bold mb-3">{project.title}</h3>
             <p className="mb-4">{project.description}</p>
-            {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            See More
-            </button> */}
         </div>
     </div>
   );

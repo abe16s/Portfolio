@@ -7,10 +7,12 @@ import Education from "./components/Education";
 import Skills from "./components/skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import ScrollProgressBar from "./components/scrollProgressBar";
 
 export default function Home() {
   return (
     <>
+      <ScrollProgressBar />
       <NavBar/>
       <AuroraBackground className="fade-out-bottom"> 
         <Hero/>
