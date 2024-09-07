@@ -1,8 +1,8 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { LampContainer } from './lamp'
-import { FaCircleCheck, FaDochub, FaEnvelope, FaExclamation, FaFacebook, FaFile, FaGithub, FaHouse, FaInstagram, FaLinkedin, FaPhone, FaTelegram, FaXTwitter } from "react-icons/fa6";
-import { FieldErrors, useForm } from "react-hook-form";
+import { FaCircleCheck, FaEnvelope, FaExclamation, FaFacebook, FaFile, FaGithub, FaHouse, FaInstagram, FaLinkedin, FaPhone, FaTelegram, FaXTwitter } from "react-icons/fa6";
+import { useForm } from "react-hook-form";
 
 interface FormData {
     FullName: string;
@@ -29,6 +29,8 @@ const Contact = () => {
 
 
     const onSubmit = (data: FormData) => {
+        setSubmissionError(null); 
+        setSubmissionSuccess(false);
         fetch(process.env.NEXT_PUBLIC_EMAIL as string || '', {
             method: 'POST',
             headers: {
