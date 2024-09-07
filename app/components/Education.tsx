@@ -6,7 +6,7 @@ const Education = () => {
     const data = [
         {
             title: "Software Engineering (BSc.)",
-            time: "Mar 2022 - 2026 (expected)",
+            time: "Mar 2022 - 2026 (Expected)",
             content: (
               <div className='flex gap-5 items-start h-[20vh] justify-end'>
                 <Image
@@ -17,7 +17,7 @@ const Education = () => {
                     className='w-1/12'
                 />
                 <p className="text-neutral-200 w-4/5 block">
-                    Currently studying Software Engineering at <a href="https://www.aau.edu.et/" target='_blank' className='font-semibold text-blue-500 hover:text-blue-400'>Addis Ababa University</a>. 
+                    Currently studying Software Engineering at <a href="https://www.aau.edu.et/" target='_blank' className='font-semibold text-blue-400 hover:text-blue-500'>Addis Ababa University</a>. 
                     A 4<sup>th</sup> year student expecting to graduate in 2026. 
                     Having an impressive CGPA of 3.97 out of 4.0.
                 </p>
@@ -37,8 +37,8 @@ const Education = () => {
                     // className='w-1/5'
                 />
                 <p className="text-neutral-200 w-4/5 block">
-                    Currently attending <a href='https://a2sv.org/' target='_blank' className='font-semibold text-blue-500 hover:text-blue-400'>Africa to Silicon Valley</a> (A2SV), a Google-backed competitive tech academy that has enabled 60+ students to secure internships and full-time positions in top tech companies.
-                    Completed over <span className='font-bold'>2000 hours</span> of training in data structures and algorithms and solved more than <span className='font-bold'>1000 problems</span> on LeetCode and Codeforces.
+                    Attending at <a href='https://a2sv.org/' target='_blank' className='font-semibold text-blue-400 hover:text-blue-500'>Africa to Silicon Valley</a> (A2SV), a Google-backed competitive tech academy that has enabled 60+ students to secure internships and full-time positions in big tech companies.
+                    Completed over <span className='font-bold'>2000 hours</span> of training in data structures and algorithms and solved more than <span className='font-bold'>1000 problems</span> on <a href="https://leetcode.com/u/abe16s/" className='font-semibold text-blue-400 hover:text-blue-500'>LeetCode</a> and <a href="https://codeforces.com/profile/abe16s" className='font-semibold text-blue-400 hover:text-blue-500'>Codeforces</a>.
                     Learning and working on different software development skills and projects.
                 </p>
               </div>

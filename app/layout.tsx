@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { ubuntu } from '@/app/fonts';
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Abenezer Seifu's Portfolio",
-  description: "A portfolio of Abenezer Seifu's",
+  description: "A portfolio of Abenezer Seifu",
+  icons: "/favicon.ico",
 };
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-black text-white ${inter.className} overflow-x-hidden`}>{children}</body>
+      <body className={`bg-black text-white ${ubuntu.className} overflow-x-hidden`}>{children}</body>
     </html>
   );
 }

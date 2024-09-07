@@ -13,7 +13,7 @@ html {
 }
 
 .fade-out-bottom{
-    mask-image: linear-gradient(to bottom, black 75%, transparent);
+    mask-image: linear-gradient(to bottom, black 85%, transparent);
 }
 
 .fade-out-top {
@@ -23,3 +23,21 @@ html {
 .fade-out-both {
     mask-image: linear-gradient(to bottom, transparent, black 40%, transparent);
 }
+
+::-webkit-scrollbar {
+    width: 7px; 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #3b82f6; 
+    border-radius: 6px; 
+  }
+  
+  ::-webkit-scrollbar-track {
+      background-color: black;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background-color: transparent; /* If the scrollbar corner shows, make it transparent */
+  }
+  

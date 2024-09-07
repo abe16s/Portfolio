@@ -9,8 +9,8 @@ const About = () => {
             <p className='text-lg'>
                 A passionate and enthusiastic software developer with a keen interest in web development,
                 specially in back-end technologies. 
-                Currently a <span className='text-blue-500'>4<sup>th</sup> year</span> Software Engineering student at Addis Ababa University. 
-                A competitive programmer with a good understanding of data structures and algorithms. 
+                Currently a 4<sup>th</sup> year <span className='text-blue-500 font-bold'>Software Engineering</span> student at Addis Ababa University. 
+                A <span className='text-blue-500 font-bold'>competitive programmer</span> with a good understanding of data structures and algorithms. 
                 Focusing on learning and striving to cope up with the fast growing tech sector.
             </p>
         </div>

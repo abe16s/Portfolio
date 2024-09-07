@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { LampContainer } from './lamp'
-import { FaCircleCheck, FaEnvelope, FaExclamation, FaFacebook, FaGithub, FaHouse, FaInstagram, FaLinkedin, FaPhone, FaTelegram, FaXTwitter } from "react-icons/fa6";
+import { FaCircleCheck, FaDochub, FaEnvelope, FaExclamation, FaFacebook, FaFile, FaGithub, FaHouse, FaInstagram, FaLinkedin, FaPhone, FaTelegram, FaXTwitter } from "react-icons/fa6";
 import { FieldErrors, useForm } from "react-hook-form";
 
 interface FormData {
@@ -55,27 +55,28 @@ const Contact = () => {
   return (
     <div id="contact" className="mt-52">
         <LampContainer>
-            <div className="flex items-stretch justify-around">
+            <div className="flex items-stretch justify-around w-4/5 mx-auto">
                 <div className="flex flex-col items-center justify-center gap-8">
                     <ul className="flex gap-4 text-3xl justify-around">
-                        <li><a href="https://www.instagram.com/abe16s/" target="_blank"><FaInstagram/></a></li>
-                        <li><a href="https://www.facebook.com/abenezer.seifu" target="_blank"><FaFacebook/></a></li>
-                        <li><a href="https://twitter.com/AbenezerSeifu5" target="_blank"><FaXTwitter/></a></li>
-                        <li><a href="https://www.linkedin.com/in/abenezer-seifu/" target="_blank"><FaLinkedin/></a></li>
-                        <li><a href="https://t.me/Abe16s" target="_blank"><FaTelegram/></a></li>
-                        <li><a href="https://github.com/abe16s" target="_blank"><FaGithub/></a></li>
+                        <li><a href="https://www.instagram.com/abe16s/" target="_blank" className="hover:text-blue-500"><FaInstagram/></a></li>
+                        <li><a href="https://www.facebook.com/abenezer.seifu" target="_blank" className="hover:text-blue-500"><FaFacebook/></a></li>
+                        <li><a href="https://twitter.com/AbenezerSeifu5" target="_blank" className="hover:text-blue-500"><FaXTwitter/></a></li>
+                        <li><a href="https://www.linkedin.com/in/abenezer-seifu/" target="_blank" className="hover:text-blue-500"><FaLinkedin/></a></li>
+                        <li><a href="https://t.me/Abe16s" target="_blank" className="hover:text-blue-500"><FaTelegram/></a></li>
+                        <li><a href="https://github.com/abe16s" target="_blank" className="hover:text-blue-500"><FaGithub/></a></li>
                     </ul>
                     <ul>
-                        <li><a className="flex gap-2" href="https://maps.app.goo.gl/G7qLqXABwttEgCfZA" target="_blank"><FaHouse/><span>King George VI St, Addis Ababa, Ethiopia</span></a></li>
-                        <li><a className="flex gap-2" href="tel:+251936120470"><FaPhone/> <span>+251936120470</span></a></li>
-                        <li><a className="flex gap-2" href="mailto:abenezerseifu123@gmail.com"><FaEnvelope/> <span>abenezerseifu123@gmail.com</span></a></li>
+                        <li><a className="flex gap-2 items-baseline" href="https://maps.app.goo.gl/G7qLqXABwttEgCfZA" target="_blank"><FaHouse/><span className="hover:text-blue-500">King George VI St, Addis Ababa, Ethiopia</span></a></li>
+                        <li><a className="flex gap-2 items-baseline" href="tel:+251936120470"><FaPhone/> <span className="hover:text-blue-500">+251936120470</span></a></li>
+                        <li><a className="flex gap-2 items-baseline" href="mailto:abenezerseifu123@gmail.com"><FaEnvelope/> <span className="hover:text-blue-500">abenezerseifu123@gmail.com</span></a></li>
+                        <li><a className="flex gap-2 items-baseline" href="https://drive.google.com/file/d/1Zs8IyE53s1rx0sAW9u7DU506uA9LEFcP/view?usp=sharing" target="_blank"><FaFile/><span className="hover:text-blue-500">Resume</span></a></li>
                     </ul>
                 </div>
                 <form className="p-3 flex flex-col text-black w-11/12 max-w-[500px]"
                     onSubmit={handleSubmit(onSubmit)}
                     noValidate    
                 >
-                    <p className="text-center text-white text-extrabold text-lg">Get in touch</p>
+                    <p className="text-center text-white text-extrabold text-xl font-bold">Get in touch</p>
                     <div>
                         <input 
                             className="block my-1 mx-auto rounded-md p-1 border-2 border-blue-500 text-white bg-transparent w-4/5" 

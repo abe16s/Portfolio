@@ -30,9 +30,9 @@ const Skills = () => {
 
     const skillsRow3 = (
         <div className='flex animate-loop-scroll-left group-hover:paused justify-around w-full flex-shrink-0'>
-            <Image src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt='MySQL' width={70} height={70} />
+            <Image src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt='MySQL' width={100} height={100} />
             <Image src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt='MongoDB' width={70} height={70} />
-            <Image src="https://upload.wikimedia.org/wikipedia/commons/6/62/Git-logo-orange.svg" alt='Git' width={70} height={70} />
+            <Image src="https://upload.wikimedia.org/wikipedia/commons/6/62/Git-logo-orange.svg" alt='Git' width={100} height={100} />
             <Image src="https://www.svgrepo.com/show/354202/postman-icon.svg" alt='Postman' width={70} height={70} />
             <Image src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt='Docker' width={70} height={70} />
             <Image src="https://jupyter.org/assets/homepage/main-logo.svg" alt='Jupyter Notebook' width={70} height={70} />
@@ -40,7 +40,7 @@ const Skills = () => {
     )
   return (
     <>
-        <h2 className="text-lg md:text-4xl my-24 max-w-4xl font-extrabold ml-36 border-b-blue-400 border-b-2">
+        <h2 className="text-lg md:text-4xl my-24 max-w-4xl font-extrabold ml-36 border-b-blue-500 border-b-2">
             Skills & Technologies
         </h2>
         <div className={`overflow-hidden m-auto flex flex-col gap-12 group text-white py-8 ${styles.logos}`}>

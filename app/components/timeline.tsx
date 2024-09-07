@@ -39,7 +39,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-6 lg:pt-20">
-        <h2 className="text-lg md:text-4xl mb-4 max-w-4xl font-extrabold ml-28 border-b-blue-400 border-b-2">
+        <h2 className="text-lg md:text-4xl mb-4 max-w-4xl font-extrabold ml-28 border-b-blue-500 border-b-2">
           Educational Background
         </h2>
       </div>
