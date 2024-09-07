@@ -46,13 +46,13 @@ const Hero = () => {
     }, 5000); // Change the interval time as needed
 
     return () => clearInterval(interval);
-  }, []);
+  });
   return (
     <section className={`relative h-[100vh] overflow-hidden flex items-center text-white text-lg ${ubuntuMono.className}`}>
       <div className="lg:ml-32 ml-20 flex flex-col translate-y-10 gap-3">
         <p className="text-blue-500 font-semibold text-xl"> Hello, World!</p>
         <h1>
-          I'm <span className="text-5xl font-extrabold">Abenezer Seifu</span>
+          I&apos;m <span className="text-5xl font-extrabold">Abenezer Seifu</span>
         </h1>
         <TypewriterEffect 
           key={index}
