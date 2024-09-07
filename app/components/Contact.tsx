@@ -44,10 +44,11 @@ const Contact = () => {
         .then(response => response.json())
         .then(data => {
             setSubmissionError(null); 
-            setSubmissionSuccess(true); 
+            setSubmissionSuccess(true);
+            reset(); 
         })
         .catch(error => {
-            setSubmissionError(error.message); // Set error message
+            setSubmissionError(error.message);
             setSubmissionSuccess(false); 
         });
     }
@@ -103,6 +104,7 @@ const Contact = () => {
                         <input 
                             className="block my-1 mx-auto rounded-md p-1 border-2 border-blue-500 text-white bg-transparent w-4/5" 
                             id="subject" type="text" placeholder="Subject" 
+                            {...register("subject")}
                         />
                     </div>
                     <div>
