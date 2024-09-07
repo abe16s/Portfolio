@@ -12,7 +12,7 @@ const NavBar = () => {
   return (
     <header className="flex items-center justify-between lg:px-28 md:px-16 py-7 absolute z-10 w-full">
       <Image src="/logo.svg" alt="logo" width={100} height={100} />
-      <nav className={` relative text-lg`}>
+      <nav className={`${playpenSans.className} relative text-lg`}>
         <ul className="flex relative">
           <div
             className="absolute bg-blue-700 h-full w-0 transition-all duration-300 ease-in-out rounded-md"
