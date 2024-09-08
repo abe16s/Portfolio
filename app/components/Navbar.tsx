@@ -31,7 +31,7 @@ const NavBar = () => {
   }, [activeIndex]);
 
   return (
-    <header className="flex items-center justify-between md:px-28 md:px-16 py-7 absolute z-10 w-full px-10">
+    <header className="flex items-center justify-between md:px-16 py-7 absolute z-10 w-full px-10">
       <Image src="/logo.svg" alt="logo" width={100} height={100} />
 
       {/* Hamburger Icon for small screens */}
