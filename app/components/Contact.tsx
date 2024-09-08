@@ -58,9 +58,9 @@ const Contact = () => {
   return (
     <div id="contact" className="mt-52">
         <LampContainer>
-            <div className="flex items-stretch justify-around w-4/5 mx-auto">
+            <div className="flex items-stretch justify-around w-4/5 mx-auto flex-col md:flex-row py-8 md:py-0 gap-4">
                 <div className="flex flex-col items-center justify-center gap-8">
-                    <ul className="flex gap-4 text-3xl justify-around">
+                    <ul className="flex gap-4 text-xl md:text-3xl justify-around">
                         <li><a href="https://www.instagram.com/abe16s/" target="_blank" className="hover:text-blue-500"><FaInstagram/></a></li>
                         <li><a href="https://www.facebook.com/abenezer.seifu" target="_blank" className="hover:text-blue-500"><FaFacebook/></a></li>
                         <li><a href="https://twitter.com/AbenezerSeifu5" target="_blank" className="hover:text-blue-500"><FaXTwitter/></a></li>
@@ -75,14 +75,14 @@ const Contact = () => {
                         <li><a className="flex gap-2 items-baseline" href="https://drive.google.com/file/d/1Zs8IyE53s1rx0sAW9u7DU506uA9LEFcP/view?usp=sharing" target="_blank"><FaFile/><span className="hover:text-blue-500">Resume</span></a></li>
                     </ul>
                 </div>
-                <form className="p-3 flex flex-col text-black w-11/12 max-w-[500px]"
+                <form className="p-3 flex flex-col text-black w-full max-w-[500px]"
                     onSubmit={handleSubmit(onSubmit)}
                     noValidate    
                 >
                     <p className="text-center text-white text-extrabold text-xl font-bold">Get in touch</p>
                     <div>
                         <input 
-                            className="block my-1 mx-auto rounded-md p-1 border-2 border-blue-500 text-white bg-transparent w-4/5" 
+                            className="block my-1 mx-auto rounded-md p-1 border-2 border-blue-500 text-white bg-transparent md:w-4/5 w-full" 
                             id="name" 
                             type="text" 
                             placeholder="Full Name" 
@@ -92,7 +92,7 @@ const Contact = () => {
                     </div>
                     <div>
                         <input 
-                            className="block my-1 mx-auto rounded-md p-1 border-2 border-blue-500 text-white bg-transparent w-4/5" 
+                            className="block my-1 mx-auto rounded-md p-1 border-2 border-blue-500 text-white bg-transparent md:w-4/5 w-full" 
                             id="email" type="email" placeholder="Email"
                             {...register("Email", { required: "I have to know how to reach you", 
                                 pattern: {
@@ -104,14 +104,14 @@ const Contact = () => {
                     </div>
                     <div>
                         <input 
-                            className="block my-1 mx-auto rounded-md p-1 border-2 border-blue-500 text-white bg-transparent w-4/5" 
+                            className="block my-1 mx-auto rounded-md p-1 border-2 border-blue-500 text-white bg-transparent md:w-4/5 w-full" 
                             id="subject" type="text" placeholder="Subject" 
                             {...register("subject")}
                         />
                     </div>
                     <div>
                         <textarea 
-                            className="block my-1 mx-auto rounded-md px-1 border-2 border-blue-500 text-white bg-transparent w-4/5" 
+                            className="block my-1 mx-auto rounded-md px-1 border-2 border-blue-500 text-white bg-transparent md:w-4/5 w-full" 
                             id="message" cols={30} rows={5} placeholder="Message"
                             {...register("message", { required: "You have to write at least hello", maxLength: {value: 1000, message: "Too many characters"} })}
                         />

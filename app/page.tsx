@@ -17,10 +17,10 @@ export default function Home() {
       <AuroraBackground className="fade-out-bottom"> 
         <Hero/>
       </AuroraBackground>
-      <div className="mx-auto rounded-md h-[100vh] overflow-hidden fade-out-both">
+      <div className="mx-auto rounded-md h-[100vh] overflow-hidden md:fade-out-both">
         <Vortex
           backgroundColor="black"
-          particleCount={500}
+          particleCount={400}
           rangeY={800}
           baseHue={120}
           className="flex items-center flex-col justify-center px-2 md:px-10 py-4"

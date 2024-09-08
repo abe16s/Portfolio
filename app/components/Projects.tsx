@@ -12,7 +12,7 @@ const Projects = () => {
 
   return (
     <section id='projects'>
-        <h2 className="text-lg md:text-4xl mt-24 mb-8 max-w-4xl font-extrabold ml-36 border-b-blue-500 border-b-2">
+        <h2 className="md:text-4xl text-2xl md:mt-24 max-w-4xl font-extrabold lg:ml-36 md:mx-10 mx-4 my-8 border-b-blue-500 border-b-2">
             Projects
         </h2>
         <HoverEffect 
