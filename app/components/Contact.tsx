@@ -63,16 +63,16 @@ const Contact = () => {
                     <ul className="flex gap-4 text-xl md:text-3xl justify-around">
                         <li><a href="https://www.instagram.com/abe16s/" target="_blank" className="hover:text-blue-500"><FaInstagram/></a></li>
                         <li><a href="https://www.facebook.com/abenezer.seifu" target="_blank" className="hover:text-blue-500"><FaFacebook/></a></li>
-                        <li><a href="https://twitter.com/AbenezerSeifu5" target="_blank" className="hover:text-blue-500"><FaXTwitter/></a></li>
+                        <li><a href="https://x.com/abe16s" target="_blank" className="hover:text-blue-500"><FaXTwitter/></a></li>
                         <li><a href="https://www.linkedin.com/in/abenezer-seifu/" target="_blank" className="hover:text-blue-500"><FaLinkedin/></a></li>
-                        <li><a href="https://t.me/Abe16s" target="_blank" className="hover:text-blue-500"><FaTelegram/></a></li>
+                        <li><a href="https://t.me/abe16s" target="_blank" className="hover:text-blue-500"><FaTelegram/></a></li>
                         <li><a href="https://github.com/abe16s" target="_blank" className="hover:text-blue-500"><FaGithub/></a></li>
                     </ul>
                     <ul>
-                        <li><a className="flex gap-2 items-baseline" href="https://maps.app.goo.gl/G7qLqXABwttEgCfZA" target="_blank"><FaHouse/><span className="hover:text-blue-500">King George VI St, Addis Ababa, Ethiopia</span></a></li>
+                        <li><div className="flex gap-2 items-baseline"><FaHouse/><span className="hover:text-blue-500">King George VI St, Addis Ababa, Ethiopia</span></div></li>
                         <li><a className="flex gap-2 items-baseline" href="tel:+251936120470"><FaPhone/> <span className="hover:text-blue-500">+251936120470</span></a></li>
                         <li><a className="flex gap-2 items-baseline" href="mailto:abenezerseifu123@gmail.com"><FaEnvelope/> <span className="hover:text-blue-500">abenezerseifu123@gmail.com</span></a></li>
-                        <li><a className="flex gap-2 items-baseline" href="https://drive.google.com/file/d/1W_xrPx0gxsqU3cV0XAl6V9adj9y4SYNl/view?usp=sharing" target="_blank"><FaFile/><span className="hover:text-blue-500">Resume</span></a></li>
+                        <li><a className="flex gap-2 items-baseline" href="https://drive.google.com/file/d/1h5aS0zikODGslSFG2V3syuPXbVFHECGa/view?usp=sharing" target="_blank"><FaFile/><span className="hover:text-blue-500">Resume</span></a></li>
                     </ul>
                 </div>
                 <form className="p-3 flex flex-col text-black w-full max-w-[500px]"

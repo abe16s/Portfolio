@@ -8,7 +8,7 @@ export function LampDemo() {
     <LampContainer>
       <motion.h1
         initial={{ opacity: 0.5, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: -100 }}
         transition={{
           delay: 0.3,
           duration: 0.8,
@@ -99,7 +99,7 @@ export const LampContainer = ({
       <div className="relative z-50 flex -translate-y-72 md:-translate-y-[300px] lg:-translate-y-80 flex-col items-center px-5 bg-transparent">
         <motion.h1
                 initial={{ opacity: 0.5, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: -100 }}
                 transition={{
                 delay: 0.3,
                 duration: 0.8,

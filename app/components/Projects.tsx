@@ -3,6 +3,7 @@ import { HoverEffect } from './card-hover-component';
 
 const Projects = () => {
   const projects = [
+    { title: 'Gazette Plus', image: '/gazette.png', description: 'A large-scale news and media mobile and web app, all-in-one news and information hub. Access a wide range of current and archived newspapers, magazines, job listings, bid announcements, and historical multimedia content. Mobile App - (Flutter), Backend - (ASP.NET Core), Frontend - (Blazor)', link: 'https://play.google.com/store/apps/details?id=et.press.gazette_plus' },
     { title: 'Local Idir Managing App', image: '/Idir.png', description: 'Idir managing application that helps facilitate the management of Idir members, monthly payments and other financial workings of Idir - Desktop App (Java Swing)', link: 'https://github.com/abe16s/IDIR' },
     { title: 'SkillTrade Web', image: '/SkillTradeWeb.png', description: 'A hub that is used to connect skilled technicians with customers easily - Web App', link: 'https://github.com/abe16s/SkillTrade' },
     { title: 'SkillTrade Mobile', image: '/SkillTradeMobile.jpg', description: 'A hub that is used to connect skilled technicians with customers easily - Mobile App (Flutter)', link: 'https://github.com/bexeGrace/flutter-2024-proj-SkillTrade-Bloc' },
